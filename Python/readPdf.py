@@ -50,11 +50,21 @@ for file in pdfFiles:
 def createCorpus(Files):  # files tem que estar em formato de lista
 
     names = []
+    text = []
+    
     try:
-        index =
         for file in Files:
+            index = file.find('\\')
+            if index != -1:
+                fileName = file[(index+1):]
+                fileName = re.sub(r'[a-zA-Z\.]', r'', fileName)
+                names.append(fileName)
+            else:
+                fileName = re.sub(r'[a-zA-Z\.]', r'', fileName)
+                names.append(fileName)
 
-            print(file)
+
+            print(names)
     except TypeError:
         print("O argumento da função tem que ser uma lista.")
 
