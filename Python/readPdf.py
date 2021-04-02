@@ -65,8 +65,8 @@ def create_corpus(files):  # files tem que estar em formato de lista
                 names.append(file_name)
 
             text.append(read_pdf_file(file))
-            print(text)
 
+        print(text[1:10])
         # data = pd.DataFrame([names, text])
 
     except TypeError:
@@ -74,3 +74,12 @@ def create_corpus(files):  # files tem que estar em formato de lista
 
 
 create_corpus(pdfFiles)
+
+
+x = ['ksjdhf', 'sdjf', 'sdfnk']
+y = ['4', '2', '3']
+
+y = list(map(int, y))
+
+index = [i for i in range(1, (len(x) + 1))]
+df = pd.DataFrame(index, x, y)
