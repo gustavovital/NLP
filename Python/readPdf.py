@@ -40,6 +40,9 @@ def read_pdf_file(pdf_file):
 
     return text
 
+# Exemplo de uso da função:
+# print(read_pdf_file(pdfFiles[0]))
+
 # Lendo todos os pdfs de uma pasta, por exemplo:
 
 # for file in pdfFiles:
