@@ -41,7 +41,7 @@ def read_pdf_file(pdf_file):
     return text
 
 # Exemplo de uso da função:
-# print(read_pdf_file(pdfFiles[0]))
+ print(read_pdf_file('Data/211th.pdf'))
 
 # Lendo todos os pdfs de uma pasta, por exemplo:
 
@@ -69,20 +69,22 @@ def create_corpus(files):  # files tem que estar em formato de lista
 
             text.append(read_pdf_file(file))
 
-        print(text[1:10])
-        # data = pd.DataFrame([names, text])
+        names = [int(i) for i in names]
+        data = pd.DataFrame(list(zip(names, text)),
+                            columns=['Doc', 'Text'])
+        data.sort_values('Doc', inplace=True)
+        data.reset_index(drop=True, inplace=True)
+        return data
 
     except TypeError:
-        print("O argumento da função tem que ser uma lista.")
+        print("O argumento da função tem que ser uma lista de arquivos.")
 
 
-create_corpus(pdfFiles)
+corpus = create_corpus(pdfFiles)
 
-
-x = ['ksjdhf', 'sdjf', 'sdfnk']
-y = ['4', '2', '3']
-
-y = list(map(int, y))
-
-index = [i for i in range(1, (len(x) + 1))]
-df = pd.DataFrame(index, x, y)
+# =
+# Por algum motivo, tres dos pdfs nao estao sendo lidos corretamente. O corpus ainda é um corpus sujo, isso é, ainda é
+# necessário passar por um dicionario de stopwords/tecnicas de analise textual. Em geral o codigo acima realiza a
+# leitura sem problemas maiores
+#
+# =#
