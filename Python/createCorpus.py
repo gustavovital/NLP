@@ -80,11 +80,14 @@ def create_corpus(files):  # files tem que estar em formato de lista
         print("O argumento da função tem que ser uma lista de arquivos.")
 
 
-corpus = create_corpus(pdfFiles)
+# corpus = create_corpus(pdfFiles)
+# corpus.to_pickle("corpus.csv")
+
+# corpus = pd.read_pickle("corpus.csv")
 
 # =
 # Por algum motivo, tres dos pdfs nao estao sendo lidos corretamente. O corpus ainda é um corpus sujo, isso é, ainda é
 # necessário passar por um dicionario de stopwords/tecnicas de analise textual. Em geral o codigo acima realiza a
-# leitura sem problemas maiores
-#
+# leitura sem problemas maiores de 'encoding'
 # =#
+
