@@ -5,7 +5,7 @@
 # Script para leitura de textos em .pdf
 # =
 
-# Modules to import:
+# Modulos importados:
 import PyPDF2
 import glob
 import re
