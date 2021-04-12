@@ -77,7 +77,7 @@ def create_corpus(files):  # files tem que estar em formato de lista
         return data
 
     except TypeError:
-        print("O argumento da função tem que ser uma lista de arquivos.")
+        print("O argumento da função tem que ser uma lista de arquivos pdf.")
 
 
 # corpus = create_corpus(pdfFiles)
