@@ -2,7 +2,7 @@
 # Autor : gustavovital
 # Data  : 01/04/2020
 #
-# Script para leitura de textos em .pdf
+# Script para leitura de textos em .pdf e cração de corpus
 # =
 
 # Modulos importados:
